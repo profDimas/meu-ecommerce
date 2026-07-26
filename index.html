@@ -17,29 +17,41 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li class="drop-hover"><a href="#">Categorias <i class="bi bi-caret-down-fill"></i></a>
+                    
+                    <li class="drop-hover"><a href="#">Produtos <i class="bi bi-caret-down-fill"></i></a>
                         <div class="drop">
                             <a href="#">Informática</a>
                             <a href="#">Vestuários</a>
                             <a href="#">Celulares</a>
                             <a href="#">Eletrodomésticos</a>
                         </div>
-                    </li>                     
-                    <li><a href="#">Contato</a></li>
+                    </li>       
+
+                    <!-- ABA ADMINISTRAÇÃO: Fica no menu e inicia com a classe hidden -->
+                    <li id="nav-admin" class="drop-hover hidden">
+                        <a href="#">Administração <i class="bi bi-caret-down-fill"></i></a>
+                        <div class="drop">
+                            <a href="#">Manutenção de Produtos</a>
+                            <a href="#">Manutenção de Usuários</a>                            
+                        </div>                    
+                    </li>
                     
-                    <!-- ÍCONE DO CARRINHO COM CONTADOR -->
+                    <!-- ÍCONE DO CARRINHO -->
                     <li>
                         <a href="#" id="cart-btn" class="cart-link">
                             🛒 Carrinho <span id="cart-count">0</span>
                         </a>
                     </li>
 
-                    <!-- Autenticação LOGADO -->
-                    <li class="auth-logged-in hidden"><a href="#" id="user-greeting">Olá, Usuário</a></li>
-                    <li class="auth-logged-in hidden"><a href="#" id="btn-logout" class="btn-logout">Sair</a></li>
+                    <!-- ÁREA DE USUÁRIO LOGADO (Com o span limpo para o JS injetar o nome) -->
+                    <li class="auth-logged-in hidden">
+                        <span id="user-greeting" style="color: white; font-weight: bold; padding: 0 10px;"></span>
+                    </li>
+                    <li class="auth-logged-in hidden">
+                        <button id="btn-logout" class="btn-logout">Sair</button>
+                    </li>
                     
-                    <!-- Autenticação DESLOGADO -->
+                    <!-- ÁREA DE USUÁRIO DESLOGADO -->
                     <li class="auth-logged-out"><a href="login.html" class="btn-login">Login</a></li>
                     <li class="auth-logged-out"><a href="cadastro.html" class="btn-cadastro">Cadastro</a></li>
                 </ul>
